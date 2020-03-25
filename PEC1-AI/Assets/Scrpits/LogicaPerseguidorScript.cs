@@ -28,7 +28,7 @@ public class LogicaPerseguidorScript : MonoBehaviour
     {
         //Ajuda per saber si l'agent es movia extreta d'aquest link: https://answers.unity.com/questions/382270/check-if-object-is-moving.html
         Vector3 startPos = agent.transform.position;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.1f);
         Vector3 finalPos = agent.transform.position;
         if (startPos != finalPos) state = stateMachine.FollowPlayer1;
         else state = stateMachine.FollowPlayer2;
